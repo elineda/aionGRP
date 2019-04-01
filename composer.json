@@ -1,0 +1,15 @@
+{
+    "name": "aiongrp/elineda",
+    "authors": [
+        {
+            "name": "Elineda",
+            "email": "henecro@yahoo.fr"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SRC\\": "src/"
+        }
+    },
+    "require": {}
+}
