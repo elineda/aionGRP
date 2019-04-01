@@ -10,4 +10,12 @@
 require __DIR__.'/../../vendor/autoload.php';
 
 
-echo $user->data['username_clean'];
+use SRC\model\Index as Index;
+
+use SRC\model\AionDD as AionDD;
+
+
+
+
+
+print_r("soka");
