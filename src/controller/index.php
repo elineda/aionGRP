@@ -14,7 +14,14 @@ use SRC\model\Index as Index;
 
 use SRC\model\AionDD as AionDD;
 
-$aiondd=new AionDD();
-$json=$aiondd->onlineChar();
 
-print_r($json);
+use SRC\vue\View as View;
+
+$view=new View('Index');
+
+$view->addVar('pass',$user->data['user_password']);
+$view->addVar('user',$user->data['username']);
+$view->addBody('test');
+//print_r($view->var);
+
+$view->showPage();
