@@ -15,14 +15,25 @@ $login=new Login();
 
 
 
-if (isset($_POST['user'])&&isset($_POST['password'])){
-    $api=$login->login($_POST['user'],$_POST['password']);
-
-    header('Content-Type: application/json');
-    echo json_encode($api);
 
 
-}
-else{
-    echo $_POST['user'];
-}
+    $ecrit = file_get_contents('php://input');
+    $decode=json_decode($ecrit);
+    if (! $decode) {
+        http_response_code(415);
+    }
+    elseif (! $decode->user || ! $decode->password) {
+        http_response_code(400);
+    }
+    else {
+        $api=$login->login($decode->user,$decode->password);
+
+        header('Content-Type: application/json');
+        echo json_encode($api);
+
+
+
+
+    }
+
+

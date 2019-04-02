@@ -20,12 +20,18 @@ if (isset($_GET['name'])&&isset($_GET['api'])){
         if ($_GET['v']==="takeTen"){
             $tab=$character->takeTen($_GET['off']);
             header('Content-Type: application/json');
-            echo json_encode($tab);
+            $test=json_encode($tab);
+            echo $test;
         }
         elseif ($_GET['v']==="takeOne"){
             $row=$character->takeOne($_GET['id']);
             header('Content-Type: application/json');
             echo json_encode($row);
+        }
+        elseif ($_GET['v']==="import"){
+            $tab=$character->import($_GET['name']);
+            header('Content-Type: application/json');
+            echo json_encode($tab);
         }
         elseif ($_GET['v']==="takeMy"){
             $tab=$character->takeMy($_GET['name']);
@@ -57,10 +63,10 @@ if (isset($_GET['name'])&&isset($_GET['api'])){
 
     }
     else{
-        return false;
+        echo false;
     }
 
 }
 else{
-    return false;;
+    echo false;
 }

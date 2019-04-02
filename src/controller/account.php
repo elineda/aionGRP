@@ -49,5 +49,5 @@ if (isset($_GET['name'])&&isset($_GET['api'])){
 
 }
 else{
-    return false;
+    return "1";
 }
