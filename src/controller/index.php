@@ -14,8 +14,7 @@ use SRC\model\Index as Index;
 
 use SRC\model\AionDD as AionDD;
 
+$aiondd=new AionDD();
+$json=$aiondd->onlineChar();
 
-
-
-
-print_r("soka");
+print_r($json);
