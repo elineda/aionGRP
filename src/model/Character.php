@@ -24,6 +24,16 @@ class Character extends DbConnect
         }
     }
 
+    public function addAccount($idaion,$name){
+        $bdd=$this->SiteConnect()
+        or die("no");
+        $req=$bdd->query('select user_id from phpbb_users where username='.$nom);
+        $row=$req->fetch();
+        $forumid=$row['user_id'];
+        $req=$bdd->prepare('insert into acc_acc_for (account_id, forum_id) value (:idaion, :forumid) ');
+        $req->execute(array("idaion"=>$idaion,"forumid"=>$forumid));
+        return true;
+    }
 
     public function takeTen($off){
         $bdd=$this->SiteConnect()
