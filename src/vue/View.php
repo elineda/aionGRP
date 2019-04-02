@@ -13,7 +13,7 @@ class View
 {
     public $title;
     public $body;
-    public $var;
+    public $var=[];
 
     public function __construct($title)
     {
@@ -29,7 +29,8 @@ class View
     public function showPage(){
         require 'page.php';
     }
-    public function addVar($name,$var){
-        $this->$var->$$name=$var;
+    public function addVar($name,$meh){
+        array_push($this->var,$meh);
     }
+
 }
