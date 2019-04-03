@@ -19,7 +19,7 @@ if (isset($_GET['name'])&&isset($_GET['api'])){
 
         if ($_GET['v']==="takeTen"){
             $tab=$character->takeTen($_GET['off']);
-            header('Content-Type: application/json');
+            header('Access-Control-Allow-Origin: *;Content-Type: application/json');
             $test=json_encode($tab);
             echo $test;
         }

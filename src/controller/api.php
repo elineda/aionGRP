@@ -17,9 +17,21 @@ $login=new Login();
 
 
 
+<<<<<<< HEAD
   if (isset($_GET['name'])&&isset($_GET['password'])) {
     $api=$login->login($_GET['name'],$_GET['password']);
 
     header('Content-Type: application/json');
     echo json_encode($api);
   }
+=======
+
+        $api=$login->login($_GET['name'],$_GET['password']);
+
+        header('Content-Type: application/json');
+        echo json_encode($api);
+
+
+
+
+>>>>>>> d3b2f07f5507f618a452ee251111535ee218016a
