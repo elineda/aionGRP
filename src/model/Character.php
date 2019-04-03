@@ -102,7 +102,7 @@ class Character extends DbConnect
     public function takeOne($id){
         $bdd=$this->SiteConnect()
             or die('no');
-        $req=$bdd->query('select * from acc_character where id='.$id);
+        $req=$bdd->query('select * from acc_character where character_id='.$id);
         $row=$req->fetch();
         return $row;
     }
