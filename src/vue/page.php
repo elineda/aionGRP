@@ -50,7 +50,25 @@
 
 
 <div class="container">
+    <main>
+        <div class="row titre">
+            <div class="col-lg-12">
+                <h1>Welcome in Aion giant roleplay !</h1>
+            </div>
+        </div>
+        <div class="row acc">
+            <div class="col-lg-8">
     <?= $this->body;?>
+            </div>
+
+            <div class="col-lg-3 ml-auto leftcol">
+                <div class="disc">
+                    <iframe src="https://discordapp.com/widget?id=251027355764523020&theme=dark" width=237" height="400" allowtransparency="true" frameborder="0"></iframe>
+                </div>
+            </div>
+
+        </div>
+    </main>
 </div>
 <footer>
 
