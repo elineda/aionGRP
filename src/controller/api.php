@@ -17,23 +17,12 @@ $login=new Login();
 
 
 
-    $ecrit = file_get_contents('php://input');
-    $decode=json_decode($ecrit);
-    if (! $decode) {
-        http_response_code(415);
-    }
-    elseif (! $decode->user || ! $decode->password) {
-        http_response_code(400);
-    }
-    else {
-        $api=$login->login($decode->user,$decode->password);
+
+        $api=$login->login($_GET['name'],$_GET['password']);
 
         header('Content-Type: application/json');
         echo json_encode($api);
 
 
-
-
-    }
 
 

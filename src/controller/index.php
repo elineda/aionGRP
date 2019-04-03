@@ -19,9 +19,8 @@ use SRC\vue\View as View;
 
 $view=new View('Index');
 
-$view->addVar('pass',$user->data['user_password']);
-$view->addVar('user',$user->data['username']);
-$view->addBody('test');
+
+$view->addBody('home');
 //print_r($view->var);
 
 $view->showPage();

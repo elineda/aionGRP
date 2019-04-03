@@ -6,7 +6,7 @@
  * Time: 10:12
  */
 
-
+header("Access-Control-Allow-Origin: *");
 if (isset($_GET['w'])){
     include __DIR__ . '/src/controller/'.$_GET['w'].'.php';
 }
