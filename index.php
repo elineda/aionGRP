@@ -16,7 +16,7 @@ include($phpbb_root_path . 'common.' . $phpEx);
 $user->session_begin();
 $auth->acl($user->data);
 $user->setup();
-
+$request->enable_super_globals();
 
 
 

@@ -55,7 +55,7 @@ class AionDD extends DbConnect
     public function onlineChar(){
         $bdd=$this->AionConnect()
             or die('rapé');
-        $req=$bdd->query('select name, world_id, gender, race from players where online="1"');
+        $req=$bdd->query('select name, world_id, gender, race, player_class from players where online="1"');
         $tabchar=[];
         while($row=$req->fetch()){
             require 'translation.php';

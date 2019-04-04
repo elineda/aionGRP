@@ -4,6 +4,10 @@
 .bar{
     background-color: black !important;
     color:white;
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 123;
 }
 body{
     background-image: url("https://elineda.ovh/bg3.png");
@@ -12,7 +16,7 @@ body{
     background-attachment: fixed;
 }
 main{
-    margin-top: 5em;
+    margin-top: 8em;
     color: white;
     position: relative;
 }
@@ -35,4 +39,24 @@ main{
 }
 .disc{
     margin: 0 auto;
+}
+.table{
+    color: white !important;
+}
+.navapp{
+
+}
+.navapp>ul{
+    list-style-type: none;
+    display: flex;
+    padding-left: 2em;
+    padding-right: 2em;
+    justify-content: space-between;
+}
+.navapp>ul>li{
+    display: block;
+    padding: 0.5em;
+}
+.navapp>ul>li>a{
+    color: inherit;
 }
