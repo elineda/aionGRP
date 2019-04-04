@@ -60,3 +60,7 @@ main{
 .navapp>ul>li>a{
     color: inherit;
 }
+.navapp>ul>li>a:hover{
+  font-weight: bold;
+  text-decoration: none;
+}
