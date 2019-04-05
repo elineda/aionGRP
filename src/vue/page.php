@@ -29,7 +29,7 @@
                     <a class="nav-link" href="http://localhost/aionGRP/index.php?w=online">Who's online ?</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost/aionGRP/index.php?w=char">Character sheets</a>
+                    <a class="nav-link" href="http://localhost/aionGRP/index.php?w=sheet">Character sheets</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="http://localhost/forum/">Forum</a>

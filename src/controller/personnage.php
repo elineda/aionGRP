@@ -28,6 +28,16 @@ if (isset($_GET['name'])&&isset($_GET['api'])){
             header('Content-Type: application/json');
             echo json_encode($row);
         }
+        elseif ($_GET['v']==="getID"){
+            $row=$character->getID($_GET['name']);
+            header('Content-Type: application/json');
+            echo json_encode($row);
+        }
+        elseif ($_GET['v']==="takeAcc"){
+            $tab=$character->takeAcc($_GET['name']);
+            header('Content-Type: application/json');
+            echo json_encode($tab);
+        }
         elseif ($_GET['v']==="import"){
             $tab=$character->import($_GET['name']);
             header('Content-Type: application/json');

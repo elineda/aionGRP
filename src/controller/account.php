@@ -32,6 +32,7 @@ if (isset($_GET['name'])&&isset($_GET['api'])){
             $test=$aionDD->login($decode->user, $decode->password);
             if ($test!=false){
                 $character->addAccount($test,$_GET['name']);
+                $character->import($_GET['name']);
                 http_response_code(200);
             }
             else {

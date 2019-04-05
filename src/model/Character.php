@@ -39,10 +39,21 @@ class Character extends DbConnect
         $forumid=$this->getID($name);
         $bdd=$this->SiteConnect()
         or die("no");
-        $req=$bdd->prepare('insert into acc_acc_for (account_id, forum_id) value (:idaion, :forumid) ');
-        $req->execute(array("idaion"=>$idaion,"forumid"=>$forumid));
-        return true;
+        $reqv=$bdd->prepare('select account_id from acc_acc_for where account_id=:idaion');
+        $reqv->execute(array("idion"=>$idaion));
+        $reqv->fetch();
+        if ($reqv){
+            return false;
+        }
+        else {
+            $req=$bdd->prepare('insert into acc_acc_for (account_id, forum_id) value (:idaion, :forumid) ');
+            $req->execute(array("idaion"=>$idaion,"forumid"=>$forumid));
+            return true;
+
+        }
+
     }
+
 
     public function import($name){
         $forumid=$this->getID($name);
@@ -106,6 +117,16 @@ class Character extends DbConnect
         $row=$req->fetch();
         return $row;
     }
+    public function takeAcc($nom){
+        $bdd=$this->SiteConnect();
+        $forumid=$this->getID($nom);
+        $req=$bdd->query('select account_id from acc_acc_for where forum_id='.$forumid);
+        $tab=[];
+        while ($row=$req->fetch()){
+            array_push($tab,$row);
+        }
+        return $tab;
+    }
     public function takeMy($nom){
         $bdd=$this->SiteConnect()
             or die("no");
@@ -135,8 +156,11 @@ class Character extends DbConnect
         $req=$bdd->prepare('select * from acc_character where name like :clef');
         $req->execute(array("clef"=>$cle));
         $tab=[];
-        $row=$req->fetch();
-        return $row;
+        while ($row=$req->fetch()){
+            array_push($tab,$row);
+        }
+
+        return $tab;
     }
 
 }

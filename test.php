@@ -1,7 +1,7 @@
 <?php
 
 
-$nom="test.png";
+$nom="images/".time().$_FILES['image']['name'];
 
 
 $resultat = move_uploaded_file($_FILES['image']['tmp_name'],$nom);
