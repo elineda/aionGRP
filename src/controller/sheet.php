@@ -9,7 +9,7 @@ use SRC\model\AionDD as AionDD;
 use SRC\vue\View as View;
 
 if ($user->data['user_id'] == ANONYMOUS){
-    return false;
+   echo '<script>window.location = "http://localhost/forum/ucp.php?mode=login&redirect=redirect.php"</script>';
 }
 
 else{
