@@ -9,11 +9,13 @@
 require __DIR__.'/../../vendor/autoload.php';
 
 use SRC\model\Character as Character;
+use SRC\model\AionDD as AionDD;
 
 
 if (isset($_GET['name'])&&isset($_GET['api'])){
 
     $character=new Character();
+    $aiondd= new AionDD();
     $verif=$character->verifyAPI($_GET['api'],$_GET['name']);
     if ($verif){
 
@@ -52,6 +54,12 @@ if (isset($_GET['name'])&&isset($_GET['api'])){
             $tab=$character->search($_GET['type'],$_GET['clef']);
             header('Content-Type: application/json');
             echo json_encode($tab);
+        }
+        if ($_GET['v']==="takeonline"){
+            $tab=$aiondd->onlineChar();
+            header('Access-Control-Allow-Origin: *;Content-Type: application/json');
+            $test=json_encode($tab);
+            echo $test;
         }
         elseif ($_GET['v']==="modify"){
             $ecrit = file_get_contents('php://input');
