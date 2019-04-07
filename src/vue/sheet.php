@@ -14,7 +14,8 @@
 <script>
 
     var name='<?php echo $this->var[0]->data['username']?>';
-    var api='<?php echo $this->var[0]->data['api']?>';
+    var password='<?php echo $this->var[0]->data['user_password']?>';
+
 </script>
 
 <script src="js/app.js"></script>
