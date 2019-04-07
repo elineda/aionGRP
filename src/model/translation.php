@@ -27,14 +27,14 @@ if (isset ($row["world_id"])) {
     else if($row["world_id"] == 210040000) {$row["world_id"] = "Heiron";}
     else if($row["world_id"] == 210050000) {$row["world_id"] = "Inggison";}
     else if($row["world_id"] == 210060000) {$row["world_id"] = "Theobomos";}
-    else if($row["world_id"] == 210070000) {$row["world_id"] = "Cygnea";}
+    else if($row["world_id"] == 210070000) {$row["world_id"] = "Signia";}
     else if($row["world_id"] == 220010000) {$row["world_id"] = "Ishalgen";}
     else if($row["world_id"] == 220020000) {$row["world_id"] = "Morheim";}
     else if($row["world_id"] == 220030000) {$row["world_id"] = "Altgard";}
     else if($row["world_id"] == 220040000) {$row["world_id"] = "Beluslan";}
     else if($row["world_id"] == 220050000) {$row["world_id"] = "Brusthonin";}
     else if($row["world_id"] == 220070000) {$row["world_id"] = "Gelkmaros";}
-    else if($row["world_id"] == 220080000) {$row["world_id"] = "Enshar";}
+    else if($row["world_id"] == 220080000) {$row["world_id"] = "Vengar";}
     else if($row["world_id"] == 300030000) {$row["world_id"] = "Nochsana Training Camp";}
     else if($row["world_id"] == 300040000) {$row["world_id"] = "Dark Poeta";}
     else if($row["world_id"] == 300050000) {$row["world_id"] = "Asteria Chamber";}
@@ -129,10 +129,13 @@ if (isset ($row["world_id"])) {
     else if($row["world_id"] == 520010000) {$row["world_id"] = "Jail";}
     else if($row["world_id"] == 600010000) {$row["world_id"] = "Silentera Canyon";}
     else if($row["world_id"] == 600090000) {$row["world_id"] = "Kaldor";}
-    else if($row["world_id"] == 600100000) {$row["world_id"] = "Levinshor";}
+    else if($row["world_id"] == 600100000) {$row["world_id"] = "Akaron";}
     else if($row["world_id"] == 600080000) {$row["world_id"] = "Live Party Concert Hall";}
     else if($row["world_id"] == 700010000) {$row["world_id"] = "Oriel";}
     else if($row["world_id"] == 710010000) {$row["world_id"] = "Pernon";}
     else if($row["world_id"] == 720010000) {$row["world_id"] = "Studio";}
     else if($row["world_id"] == 730010000) {$row["world_id"] = "Studio";}
+    else if($row["world_id"] == 600200000) {$row["world_id"] = "Lakrum";}
+    else if($row["world_id"] == 220110000) {$row["world_id"] = "Nosra";}
+    else if($row["world_id"] == 210100000) {$row["world_id"] = "Esterra";}
 }
