@@ -142,6 +142,27 @@ class Character extends DbConnect
         }
         return $tab;
     }
+    public function verifyIsMine($name,$idchar){
+        $idforum=$this->getID($name);
+        $bdd=$this->SiteConnect();
+        $req=$bdd->prepare('select * from acc_acc_for where forum_id=:idforum');
+        $req->execute(array("idforum"=>$idforum));
+        $test=false;
+        while ($row=$req->fetch()){
+            $req1=$bdd->prepare('select * from acc_character where account_id=:idacc');
+            $req1->execute(array("idacc"=>$row['account_id']));
+            while ($row1=$req1->fetch()){
+                if ($idchar==$row1['character_id']){
+                    $test=true;
+                    break;
+                }
+            }
+            if ($test){
+                break;
+            }
+        }
+        return $test;
+    }
     public function modify($id,$description,$house){
         $bdd=$this->SiteConnect()
             or die('no');
