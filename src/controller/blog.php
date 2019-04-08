@@ -38,6 +38,18 @@ if (isset($_GET['name'])&&isset($_GET['api'])){
             header('Content-Type: application/json');
             echo json_encode($tab);
         }
+        elseif ($_GET['v']=="imgsend"){
+
+
+            if (isset($_GET['id'])&&isset($_FILES['image'])){
+                $nom="images/".time().$_FILES['image']['name'];
+
+                $image->addimg($nom,$_GET['id']);
+                $resultat = move_uploaded_file($_FILES['image']['tmp_name'],$nom);
+                if ($resultat) echo "Transfert réussi";
+
+            }
+        }
         elseif ($_GET['v']=="addBlog"){
 
             $ecrit = file_get_contents('php://input');

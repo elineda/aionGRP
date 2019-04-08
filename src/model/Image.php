@@ -26,6 +26,9 @@ class Image extends DbConnect
       }
       return $tab;
     }
+    public function  showOne($id){
+
+    }
 
 
 }
