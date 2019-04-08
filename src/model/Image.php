@@ -27,7 +27,25 @@ class Image extends DbConnect
       return $tab;
     }
     public function  showOne($id){
-
+        $bdd=$this->SiteConnect()
+            or die('no');
+        $req=$bdd->prepare('select * from acc_img where id=:id');
+        $req->execute(array("id"=>$id));
+        $row=$req->fetch();
+        return $row;
+    }
+    public function remove($id){
+        $bdd=$this->SiteConnect()
+            or die('no');
+        $req=$bdd->prepare( 'delete from acc_img where id=:id');
+        $req->execute(array("id"=>$id));
+        return true;
+    }
+    public function makedefault($idchar,$idimg){
+        $bdd=$this->SiteConnect();
+        $req=$bdd->prepare('update acc_character set imgdef=:idimg where character_id=:idchar ');
+        $req->execute(array("idimg"=>$idimg,"idchar"=>$idchar));
+        return true;
     }
 
 
