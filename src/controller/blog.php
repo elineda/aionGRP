@@ -38,6 +38,16 @@ if (isset($_GET['name'])&&isset($_GET['api'])){
             header('Content-Type: application/json');
             echo json_encode($tab);
         }
+        elseif ($_GET['v']=="imgtakeone"){
+            $tab=$image->showOne($_GET['id']);
+            header('Content-Type: application/json');
+            echo json_encode($tab);
+        }
+        elseif ($_GET['v']=="imgremove"){
+            $tab=$image->remove($_GET['id']);
+            header('Content-Type: application/json');
+            echo json_encode($tab);
+        }
         elseif ($_GET['v']=="imgsend"){
 
 
