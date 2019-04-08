@@ -15,7 +15,17 @@ class Image extends DbConnect
         return true;
 
     }
-
+    public function showAll($idchar){
+      $bdd=$this->SiteConnect()
+        or die('no');
+      $req=$bdd->prepare('SELECT * FROM acc_img WHERE character_id=:idchar ORDER BY id');
+      $req->execute(array("idchar"=>$idchar));
+      $tab=[];
+      while ($row=$req->fetch()){
+        array_push($tab,$row);
+      }
+      return $tab;
+    }
 
 
 }

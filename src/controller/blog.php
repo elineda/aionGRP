@@ -12,11 +12,13 @@ require __DIR__.'/../../vendor/autoload.php';
 
 use SRC\model\Blog as Blog;
 use SRC\model\Character as Character;
+use SRC\model\Image as Image;
 
 
 if (isset($_GET['name'])&&isset($_GET['api'])){
     $blog=new Blog();
     $character=new Character();
+    $image=new Image();
     $verif=$character->verifyAPI($_GET['api'],$_GET['name']);
 
     if ($verif){
@@ -30,6 +32,11 @@ if (isset($_GET['name'])&&isset($_GET['api'])){
             $row=$blog->selectOne($_GET['idblog']);
             header('Content-Type: application/json');
             echo json_encode($row);
+        }
+        elseif ($_GET['v']=="imgtakeall"){
+            $tab=$image->showAll($_GET['idchar']);
+            header('Content-Type: application/json');
+            echo json_encode($tab);
         }
         elseif ($_GET['v']=="addBlog"){
 
@@ -79,4 +86,3 @@ if (isset($_GET['name'])&&isset($_GET['api'])){
 else{
     http_response_code(403);
 }
-
