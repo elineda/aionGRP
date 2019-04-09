@@ -23,7 +23,7 @@ class Login extends DbConnect
             if ($row['api']==null){
                 //let's create token
                 $api=$row['username'].$row['user_password'];
-                $api=base64_encode(sha1($api,true));
+                $api=sha1($api);
                 $req2=$bdd->prepare('update phpbb_users set api=:api where username=:user');
                 $req2->execute(array("api"=>$api,"user"=>$user));
                 return $api;
