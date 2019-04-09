@@ -43,8 +43,12 @@ class Image extends DbConnect
     }
     public function makedefault($idchar,$idimg){
         $bdd=$this->SiteConnect();
+        $req=$bdd->prepare('select * from acc_img where id=:id');
+        $req->execute(array("id"=>$idimg));
+        $row=$req->fetch();
+        $pathimage=$row['img_path'];
         $req=$bdd->prepare('update acc_character set imgdef=:idimg where character_id=:idchar ');
-        $req->execute(array("idimg"=>$idimg,"idchar"=>$idchar));
+        $req->execute(array("idimg"=>$pathimage,"idchar"=>$idchar));
         return true;
     }
 
