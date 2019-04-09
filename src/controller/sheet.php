@@ -10,7 +10,7 @@ use SRC\model\Login as Login;
 use SRC\vue\View as View;
 
 if ($user->data['user_id'] == ANONYMOUS){
-   echo '<script>window.location = "http://localhost/forum/ucp.php?mode=login&redirect=redirect.php"</script>';
+   echo '<script>window.location = "https://elineda.ovh/forum/ucp.php?mode=login&redirect=redirect.php"</script>';
 }
 
 else{

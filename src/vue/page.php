@@ -7,7 +7,7 @@
 
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="http://localhost/aionGRP/style.css">
+    <link rel="stylesheet" href="/aionGRP/style.css">
 </head>
 <body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -23,16 +23,16 @@
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost/aionGRP/index.php">Home</a>
+                    <a class="nav-link" href="/aionGRP/index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost/aionGRP/index.php?w=online">Who's online ?</a>
+                    <a class="nav-link" href="/aionGRP/index.php?w=online">Who's online ?</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost/aionGRP/index.php?w=sheet">Character sheets</a>
+                    <a class="nav-link" href="/aionGRP/index.php?w=sheet">Character sheets</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost/forum/">Forum</a>
+                    <a class="nav-link" href="https://elineda.ovh/forum/">Forum</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Discord</a>

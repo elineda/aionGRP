@@ -3,9 +3,9 @@
     <h3>Character Sheet</h3>
     <nav class="navapp">
         <ul>
-            <li> <router-link to="/aionGRPlaravel/public/mycharacters"><button type="button" class="btn btn-light">My Characters</button></router-link></li>
-            <li>  <router-link to="/aionGRPlaravel/public/searchcharacters"><button type="button" class="btn btn-light">Search Characters</button></router-link></li>
-            <li> <router-link to="/aionGRPlaravel/public/accountfusion"><button type="button" class="btn btn-light">Import Characters</button></router-link></li>
+            <li> <router-link to="/aionGRP/mycharacters"><button type="button" class="btn btn-light">My Characters</button></router-link></li>
+            <li>  <router-link to="/aionGRP/searchcharacters"><button type="button" class="btn btn-light">Search Characters</button></router-link></li>
+            <li> <router-link to="/aionGRP/accountfusion"><button type="button" class="btn btn-light">Import Characters</button></router-link></li>
         </ul>
     </nav>
     <router-view></router-view>
@@ -19,4 +19,4 @@
 
 </script>
 
-<script src="js/app.js"></script>
+<script src="/aionGRP/js/app.js"></script>
