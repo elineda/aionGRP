@@ -95,7 +95,7 @@ if (isset($_GET['name'])&&isset($_GET['api'])){
             else {
 
                 $row=$blog->modifyBlog($_GET['idblog'],$decode->title,$decode->data);
-                http_response_code(200);
+                echo $row;
 
             }
 
