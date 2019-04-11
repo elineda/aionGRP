@@ -65,7 +65,7 @@ function popup(region,tab){
 }
 
 function map(){
-  let url='http://localhost/aionGRP/api.php?w=test&v=takeonline';
+  let url='https://elineda.ovh/aionGRP/api.php?w=test&v=takeonline';
   var tab=[];
   $.getJSON(url, function (data) {
     console.log(data);

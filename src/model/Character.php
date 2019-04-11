@@ -163,11 +163,17 @@ class Character extends DbConnect
         }
         return $test;
     }
-    public function modify($id,$description,$house){
+    public function modify($id,$data){
         $bdd=$this->SiteConnect()
             or die('no');
-        $req=$bdd->prepare('update acc_character set  description=:description, house=:house where character_id=:id');
-        $req->execute(array("description"=>$description,"house"=>$house,"id"=>$id));
+        $req=$bdd->prepare('update acc_character set  description=:description, house=:house, size=:size, weight=:weight, racerp=:racerp, age=:age where character_id=:id');
+        $req->execute(array("description"=>$data->description,
+            "house"=>$data->house,
+            "id"=>$id,
+            "size"=>$data->size,
+            "weight"=>$data->weight,
+            "racerp"=>$data->racerp,
+            "age"=>$data->age));
         return true;
     }
     public function search($type,$clef){

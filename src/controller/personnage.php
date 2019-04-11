@@ -73,14 +73,14 @@ if (isset($_GET['name'])&&isset($_GET['api'])){
             if (! $decode) {
                 http_response_code(415);
             }
-            elseif (! $decode->description || ! $decode->house || ! $decode->id) {
+            elseif (! $decode->data || ! $decode->id) {
                 http_response_code(400);
             }
             else {
                 $test=$character->verifyIsMine($_GET['name'],$decode->id);
                 if ($test){
 
-                    $character->modify($decode->id,$decode->description,$decode->house);
+                    $character->modify($decode->id,$decode->data);
                     http_response_code(200);
                 }
                 else{
