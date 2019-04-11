@@ -17,4 +17,4 @@ $test=json_encode($tab);
 echo $test;
 }
 
-//[{"name":"Ellice","0":"Ellice","world_id":"Sanctum","1":"110010000","gender":"FEMALE","2":"FEMALE","race":"ELYOS","3":"ELYOS","player_class":"TEMPLAR","4":"TEMPLAR"},{"name":"Ellineda","0":"Ellineda","world_id":"Akaron","1":"600100000","gender":"FEMALE","2":"FEMALE","race":"ASMODIANS","3":"ASMODIANS","player_class":"SORCERER","4":"SORCERER"}]
+//[{"name":"Ellice","0":"Ellice","world_id":"Sanctum","1":"110010000","gender":"FEMALE","2":"FEMALE","race":"ELYOS","3":"ELYOS","player_class":"TEMPLAR","4":"TEMPLAR"},{"name":"Ellineda","0":"Ellineda","world_id":"Poeta","1":"600100000","gender":"FEMALE","2":"FEMALE","race":"ASMODIANS","3":"ASMODIANS","player_class":"SORCERER","4":"SORCERER"}]

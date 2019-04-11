@@ -1,0 +1,51 @@
+#elysea {
+  display: block;
+  width: 600px;
+  height: 600px;
+  margin-top: 10px;
+  margin-left: 50px;
+  background-image: url("map/elysea.png");
+  position: absolute;
+
+}
+
+#asmodee{
+  display: block;
+  width: 600px;
+  height: 600px;
+  margin-top: 10px;
+  margin-left: 50px;
+  background-image: url("map/asmodee.png");
+  position: absolute;
+}
+
+#balaurea {
+  display: block;
+  width: 500px;
+  height: 500px;
+  margin-top: 10px;
+  margin-left: 100px;
+  background-image: url("map/balaureacomplete.png");
+  position: absolute;
+
+}
+.map {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  background-image: url("map/map-pin.svg");
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+}
+
+.popup {
+  font-size: 25px;
+  color: red;
+  text-shadow: -1px 0 black, 0 1px black,
+      1px 0 black, 0 -1px black
+}
+
+li{
+  list-style-type: none;
+}
