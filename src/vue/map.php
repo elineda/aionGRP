@@ -11,10 +11,10 @@
     			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     			  crossorigin="anonymous"></script>
 
-    <nav>
-      <button type="button" id="elyseab" class="btn btn-info">Elysea</button>
-      <button type="button" id="asmodeeb" class="btn btn-info">Asmodee</button>
-      <button type="button" id="balaureab" class="btn btn-info">Balaurea</button>
+    <nav style="display: inline-flex; justify-content: space-around;margin: 0 auto; width: 100%;">
+      <button type="button" id="elyseab" class="btn btn-map">Elysea</button>
+      <button type="button" id="asmodeeb" class="btn btn-map">Asmodee</button>
+      <button type="button" id="balaureab" class="btn btn-map">Balaurea</button>
     </nav>
     <div id="elysea">
       <div id="Sanctum" class="map" style=" position: absolute; height: 30px; width: 30px;  top: 140px; left: 295px;"></div>

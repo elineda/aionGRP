@@ -34,6 +34,9 @@
                     <a class="nav-link" href="/aionGRP/index.php?w=sheet">Character sheets</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="/aionGRP/index.php?w=map">Server Map</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="https://elineda.ovh/forum/">Forum</a>
                 </li>
                 <li class="nav-item">
