@@ -61,6 +61,12 @@ if (isset($_GET['name'])&&isset($_GET['api'])){
             $test=json_encode($tab);
             echo $test;
         }
+        else if ($_GET['v']==="verifyismine"){
+            $tab=$character->verifyIsMine($_GET['name'],$_GET['idchar']);
+            header('Access-Control-Allow-Origin: *;Content-Type: application/json');
+            $test=json_encode($tab);
+            echo $test;
+        }
         elseif ($_GET['v']==="modify"){
             $ecrit = file_get_contents('php://input');
             $decode=json_decode($ecrit);
