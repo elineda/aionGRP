@@ -18,7 +18,7 @@ if (isset($_GET['name'])&&isset($_GET['api'])){
     $character=new Character();
     $verif=$character->verifyAPI($_GET['api'],$_GET['name']);
 
-    if ($verif){
+    if ($verif==123){
         $ecrit = file_get_contents('php://input');
         $decode=json_decode($ecrit);
         if (! $decode) {
@@ -31,19 +31,19 @@ if (isset($_GET['name'])&&isset($_GET['api'])){
 
             $test=$aionDD->login($decode->user, $decode->password);
             if ($test!=false){
-                $character->addAccount($test,$_GET['name']);
+                $er=$character->addAccount($test,$_GET['name']);
                 $character->import($_GET['name']);
-                http_response_code(200);
+                print_r($er);
             }
             else {
-                http_response_code(403);
+                echo $test;
             }
 
 
         }
     }
     else{
-        http_response_code(403);
+        echo $verif;
     }
 
 

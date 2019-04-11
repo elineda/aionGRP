@@ -27,11 +27,11 @@ class Character extends DbConnect
         $req=$bdd->prepare('select api from phpbb_users where username=:user');
         $req->execute(array("user"=>$nom));
         $row=$req->fetch();
-        if ($row['api']===$api){
-            return true;
+        if ($row['api']==$api){
+            return 123;
         }
         else{
-            return false;
+            return $row['api'].' '.$api;
         }
     }
 
@@ -40,10 +40,10 @@ class Character extends DbConnect
         $bdd=$this->SiteConnect()
         or die("no");
         $reqv=$bdd->prepare('select account_id from acc_acc_for where account_id=:idaion');
-        $reqv->execute(array("idion"=>$idaion));
-        $reqv->fetch();
-        if ($reqv){
-            return false;
+        $reqv->execute(array("idaion"=>$idaion));
+        $row=$reqv->fetch();
+        if ($row){
+            return $idaion;
         }
         else {
             $req=$bdd->prepare('insert into acc_acc_for (account_id, forum_id) value (:idaion, :forumid) ');
@@ -141,6 +141,27 @@ class Character extends DbConnect
             }
         }
         return $tab;
+    }
+    public function verifyIsMine($name,$idchar){
+        $idforum=$this->getID($name);
+        $bdd=$this->SiteConnect();
+        $req=$bdd->prepare('select * from acc_acc_for where forum_id=:idforum');
+        $req->execute(array("idforum"=>$idforum));
+        $test=false;
+        while ($row=$req->fetch()){
+            $req1=$bdd->prepare('select * from acc_character where account_id=:idacc');
+            $req1->execute(array("idacc"=>$row['account_id']));
+            while ($row1=$req1->fetch()){
+                if ($idchar==$row1['character_id']){
+                    $test=true;
+                    break;
+                }
+            }
+            if ($test){
+                break;
+            }
+        }
+        return $test;
     }
     public function modify($id,$description,$house){
         $bdd=$this->SiteConnect()

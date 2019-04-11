@@ -61,6 +61,12 @@ if (isset($_GET['name'])&&isset($_GET['api'])){
             $test=json_encode($tab);
             echo $test;
         }
+        else if ($_GET['v']==="verifyismine"){
+            $tab=$character->verifyIsMine($_GET['name'],$_GET['idchar']);
+            header('Access-Control-Allow-Origin: *;Content-Type: application/json');
+            $test=json_encode($tab);
+            echo $test;
+        }
         elseif ($_GET['v']==="modify"){
             $ecrit = file_get_contents('php://input');
             $decode=json_decode($ecrit);
@@ -71,9 +77,15 @@ if (isset($_GET['name'])&&isset($_GET['api'])){
                 http_response_code(400);
             }
             else {
+                $test=$character->verifyIsMine($_GET['name'],$decode->id);
+                if ($test){
 
-                $character->modify($decode->id,$decode->description,$decode->house);
-                http_response_code(200);
+                    $character->modify($decode->id,$decode->description,$decode->house);
+                    http_response_code(200);
+                }
+                else{
+                    http_response_code(403);
+                }
 
 
             }
