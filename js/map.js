@@ -1,34 +1,37 @@
 $(function(){
 
+function cache(){
+  $('#Sanctum').hide();
+  $('#Poeta').hide();
+  $('#Oriel').hide();
+  $('#Iluma').hide();
+  $('#Verteron').hide();
+  $('#Eltnen').hide();
+  $('#Heiron').hide();
+  $('#Theobomos').hide();
 
-$('#Sanctum').hide();
-$('#Poeta').hide();
-$('#Oriel').hide();
-$('#Iluma').hide();
-$('#Verteron').hide();
-$('#Eltnen').hide();
-$('#Heiron').hide();
-$('#Theobomos').hide();
+  $('#Brusthonin').hide();
+  $('#Morheim').hide();
+  $('#Beluslan').hide();
+  $('#Pandaemonium').hide();
+  $('#Pernon').hide();
+  $('#Altgard').hide();
+  $('#Ishalgen').hide();
+  $('#Norsvold').hide();
 
-$('#Brusthonin').hide();
-$('#Morheim').hide();
-$('#Beluslan').hide();
-$('#Pandaemonium').hide();
-$('#Pernon').hide();
-$('#Altgard').hide();
-$('#Ishalgen').hide();
-$('#Norsvold').hide();
+  $('#Inggison').hide();
+  $('#SilenteraCanyon').hide();
+  $('#Gelkmaros').hide();
+  $('#Kaldor').hide();
+  $('#Signia').hide();
+  $('#Vengar').hide();
+  $('#Lakrum').hide();
 
-$('#Inggison').hide();
-$('#SilenteraCanyon').hide();
-$('#Gelkmaros').hide();
-$('#Kaldor').hide();
-$('#Signia').hide();
-$('#Vengar').hide();
-$('#Lakrum').hide();
 
-$('#asmodee').hide();
-$('#balaurea').hide();
+
+}
+
+
 
 
 
@@ -68,11 +71,8 @@ function map(){
   let url='https://elineda.ovh/aionGRP/api.php?w=test&v=takeonline';
   var tab=[];
   $.getJSON(url, function (data) {
-    console.log(data);
 
     tab=data;
-    console.log(tab);
-
     for (var i = 0; i < tab.length; i++) {
 
       //map elysea
@@ -162,13 +162,17 @@ function map(){
 
 }
 
+cache();
+  $('#asmodee').hide();
+  $('#balaurea').hide();
+
 var tab=map();
 
 
 
   window.setInterval(function() {
+    cache();
     var tab=map();
-    console.log("tic, tac");
-  }, 5000);
+  }, 60000);
 
 });

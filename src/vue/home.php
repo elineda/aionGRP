@@ -1,4 +1,12 @@
 
+<h3> What GRP is it ?</h3>
+
+
+<p>We are a roleplay server in Aion. What's mean this ? <br>
+It's mean we don't do pve or pvp in this server. All instance are down and all players are in a neutral faction.<br>
+You wan enjoy without barrier all role play features in aion : Housing, Infinite character appearance in aion, a lot of skin for free !<br>
+Free to download our game, (different than eu or na official) and take on look on discord and forum for further information !</p>
+
             <h3> Quick lore : </h3>
             <p>This server takes place in  the Post-Dream Era which has started after the planet has stabilized itself from the bleeding aether that once threatened to split it further than it already has.
                 During this bleeding period the overabundance of aether has caused various instabilities most notably disproportionate sizes and dimensional rifts beyond what was previously experienced.

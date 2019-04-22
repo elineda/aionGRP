@@ -67,6 +67,10 @@
             </div>
 
             <div class="col-lg-3 ml-auto leftcol">
+                <div class="patcher">
+                    <img src="/aionGRP/images/patcher.png" style="width: 240px;">
+                   <a href="/aionGRP/launcher.zip"><button style="margin: 1em auto; display: block;"  "button" class="btn btn-map">Download Game</button></a>
+                </div>
                 <div class="disc">
                     <iframe src="https://discordapp.com/widget?id=251027355764523020&theme=dark" width="237" height="400" allowtransparency="true" frameborder="0"></iframe>
                 </div>
