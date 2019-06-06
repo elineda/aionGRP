@@ -17,3 +17,4 @@
     var burl='https://elineda.ovh/aionGRP/';
 
 </script>
+<script src="/aionGRP/js/app.js"></script>
