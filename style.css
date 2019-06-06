@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
 @import url('https://fonts.googleapis.com/css?family=Marko+One');
 
@@ -76,3 +77,83 @@ main{
   font-weight: bold;
   text-decoration: none;
 }
+=======
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Marko+One');
+
+.bar{
+    background-color: black !important;
+    color:white;
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 123;
+}
+.btn-map{
+    background: rgba(154,83,254,0.5) !important;
+    width: 160px;
+    color: white;
+}
+.btn-map:hover{
+    background: rgba(154,83,254,0.5) !important;
+    border: white 1px solid;
+    width: 160px;
+    font-weight: bold;
+    color:white;
+}
+body{
+    background-image: url("https://elineda.ovh/bg3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+main{
+    margin-top: 8em;
+    color: white;
+    position: relative;
+}
+.titre{
+    display: block;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    padding: 30px;
+    font-family: 'Marko One', serif;
+    font-size: 40px;
+}
+.acc{
+    margin-top:2em;
+    font-family: 'Indie Flower', cursive;
+}
+.acc>div{
+
+    padding:1.5em;
+    background-color: rgba(0,0,0,0.5);
+}
+.disc{
+    margin: 0 auto;
+}
+.table{
+    color: white !important;
+}
+.navapp{
+
+}
+.navapp>ul{
+    list-style-type: none;
+    display: flex;
+    padding-left: 2em;
+    padding-right: 2em;
+    justify-content: space-between;
+}
+.navapp>ul>li{
+    display: block;
+    padding: 0.5em;
+}
+.navapp>ul>li>a{
+    color: inherit;
+}
+.navapp>ul>li>a:hover{
+  font-weight: bold;
+  text-decoration: none;
+}
+>>>>>>> 7c85792392bd355cb1b25b71e43b81291d970142

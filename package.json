@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "name": "aiongrp",
   "version": "0.1.0",
@@ -33,3 +34,40 @@
     "not ie <= 8"
   ]
 }
+=======
+{
+  "name": "aiongrp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "axios": "^0.18.1",
+    "bootstrap": "^4.3.1",
+    "bootstrap-vue": "^2.0.0-rc.18",
+    "core-js": "^2.6.5",
+    "vue": "^2.6.10",
+    "vue-axios": "^2.1.4",
+    "vue-router": "^3.0.2",
+    "vue-session": "^1.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.5.0",
+    "@vue/cli-service": "^3.5.0",
+    "vue-template-compiler": "^2.5.21",
+    "vue2-collapse": "^1.0.15"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
+>>>>>>> 7c85792392bd355cb1b25b71e43b81291d970142
