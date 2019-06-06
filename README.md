@@ -2,28 +2,11 @@
 
 ## Project setup
 ```
-npm install
+composer update
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+##requirement
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Phpbb forum in /forum folder
 
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+file for database.
