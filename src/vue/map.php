@@ -5,7 +5,7 @@
 
 ?>
 
-    <link rel="stylesheet" href="map.css">
+    <link rel="stylesheet" href="/aionGRP/map.css">
     <script
     			  src="https://code.jquery.com/jquery-3.3.1.js"
     			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -51,4 +51,4 @@
 
 <!--[{"name":"Ellice","0":"Ellice","world_id":"Sanctum","1":"110010000","gender":"FEMALE","2":"FEMALE","race":"ELYOS","3":"ELYOS","player_class":"TEMPLAR","4":"TEMPLAR"},{"name":"Ellineda","0":"Ellineda","world_id":"Poeta","1":"600100000","gender":"FEMALE","2":"FEMALE","race":"ASMODIANS","3":"ASMODIANS","player_class":"SORCERER","4":"SORCERER"}]-->
 
-<script src="js/map.js"></script>
+<script src="/aionGRP/js/map.js"></script>

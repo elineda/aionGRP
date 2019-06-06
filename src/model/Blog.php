@@ -24,7 +24,7 @@ class Blog extends DbConnect
 
     public function selectTen($char,$off){
         $bdd=$this->SiteConnect();
-        $req=$bdd->prepare('select * from acc_blog where character_id=:character_id limit 10');
+        $req=$bdd->prepare('select * from acc_blog where character_id=:character_id order by date_post desc limit 10');
         $req->execute(array("character_id"=>$char));
         $tab=[];
         while ($row=$req->fetch()){

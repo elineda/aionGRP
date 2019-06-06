@@ -3,9 +3,9 @@
     <h3>Character Sheet</h3>
     <nav class="navapp">
         <ul>
-            <li> <router-link to="/aionGRP/mycharacters"><button type="button" class="btn btn-light">My Characters</button></router-link></li>
-            <li>  <router-link to="/aionGRP/searchcharacters"><button type="button" class="btn btn-light">Search Characters</button></router-link></li>
-            <li> <router-link to="/aionGRP/accountfusion"><button type="button" class="btn btn-light">Import Characters</button></router-link></li>
+            <li> <router-link to="/aionGRP/index.php/mycharacters"><button type="button" class="btn btn-map">My Characters</button></router-link></li>
+            <li>  <router-link to="/aionGRP/index.php/searchcharacters"><button type="button" class="btn btn-map">Search Characters</button></router-link></li>
+            <li> <router-link to="/aionGRP/index.php/accountfusion"><button type="button" class="btn btn-map">Import Characters</button></router-link></li>
         </ul>
     </nav>
     <router-view></router-view>
