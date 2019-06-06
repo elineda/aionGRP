@@ -58,7 +58,7 @@
     <main>
         <div class="row titre">
             <div class="col-lg-12">
-                <h1>Welcome in Aion giant roleplay !</h1>
+                <h1>Welcome in Aion giantess roleplay !</h1>
             </div>
         </div>
         <div class="row acc">
